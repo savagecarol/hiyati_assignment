@@ -1,19 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_page_ui/widget_class/forms.dart';
 
-void main() {
-  runApp(Main());
-}
-
-class Main extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return MaterialApp(
-      home: MainHome(),
-    );
-  }
-}
 
 class MainHome extends StatefulWidget {
   @override
