@@ -46,7 +46,7 @@ class Forms {
       height: h,
       width: w,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(h*.2),
         gradient: LinearGradient(colors: [
           linear1,
           linear2,
