@@ -1,6 +1,22 @@
 import 'package:flutter/material.dart';
 
 class Forms {
+  smallavatar(BuildContext context, double h) {
+    return Card(
+      shape: CircleBorder(),
+      elevation: 2,
+      child: CircleAvatar(
+        backgroundColor: Colors.deepPurple,
+        radius: h * .04,
+        child: CircleAvatar(
+          backgroundImage: new NetworkImage(
+              "https://i.pinimg.com/originals/24/37/bd/2437bd9758a684862c11aa9e8f20341a.jpg"),
+          radius: h * .035,
+        ),
+      ),
+    );
+  }
+
   textformfieldcontainer(
       BuildContext context, double t, Color a, Color b, String hint) {
     return Container(
@@ -24,10 +40,11 @@ class Forms {
     return TextStyle(color: a, fontWeight: FontWeight.bold, fontSize: t);
   }
 
-  lencontainer(BuildContext context, double h, double w, double t, Color a,
-      Color linear1, Color linear2) {
+  lencontainer(BuildContext context, String text, double h, double w, double t,
+      Color a, Color linear1, Color linear2) {
     return Container(
       height: h,
+      width: w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         gradient: LinearGradient(colors: [
@@ -42,19 +59,37 @@ class Forms {
           )
         ],
       ),
-      child: Center(child: Text("Login", style: textstyles(context, t, a))),
+      child: Center(child: Text(text, style: textstyles(context, t, a))),
     );
   }
-    textfieldcontainerdecoration(BuildContext context,Color a ,Color b,double h) {
-      return BoxDecoration(
-          color: a,
-          borderRadius: BorderRadius.circular(h),
-          boxShadow: [
-            BoxShadow(
-              color: b,
-              blurRadius: 20,
-              offset: Offset(2, 8),
-            )
-          ]);
-    }
+
+  textfieldcontainerdecoration(
+      BuildContext context, Color a,Color b ,Color c, double h) {
+    return BoxDecoration(
+         gradient: LinearGradient(colors: [
+          a,
+          b,
+        ]),
+        borderRadius: BorderRadius.circular(h),
+        boxShadow: [
+          BoxShadow(
+            color: c,
+            blurRadius: 10,
+            offset: Offset(1.5, 1.5),
+          )
+        ]);
+  }
+
+  centerImage(BuildContext context, double h) {
+    return Container(
+        height: h * .2, child: Image(image: AssetImage("assets/a.png")));
+  }
+
+  button(BuildContext context) {
+    return FloatingActionButton(
+      child: Icon(Icons.home),
+      backgroundColor: Colors.purple,
+      onPressed: () {},
+    );
+  }
 }
