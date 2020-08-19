@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_page_ui/widget_class/forms.dart';
-
-
 class MainHome extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -9,9 +7,7 @@ class MainHome extends StatefulWidget {
     return MainHomeState();
   }
 }
-
 var h, w, t;
-
 class MainHomeState extends State<MainHome> {
   var Context;
   Forms f = new Forms();
