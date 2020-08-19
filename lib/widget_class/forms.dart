@@ -63,6 +63,33 @@ class Forms {
     );
   }
 
+  containerdecoration(
+      BuildContext context, Color a,Color b ,Color c, double h) {
+    return BoxDecoration(
+         gradient: LinearGradient(colors: [
+          a,
+          b,
+        ]),
+        borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(h),
+            bottomRight: Radius.circular(h)
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: c,
+            blurRadius: 10,
+            offset: Offset(1.5, 1.5),
+          )
+        ]);
+  }
+
+
+
+
+
+
+
+
   textfieldcontainerdecoration(
       BuildContext context, Color a,Color b ,Color c, double h) {
     return BoxDecoration(

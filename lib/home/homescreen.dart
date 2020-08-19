@@ -42,7 +42,7 @@ class MainHomeState extends State<MainHome> {
             child: Container(
               padding: EdgeInsets.all(12),
               height: h * .425,
-              decoration: f.textfieldcontainerdecoration(
+              decoration: f.containerdecoration(
                   context,
                       Color.fromRGBO(146, 80, 157, 1),
                   Color.fromRGBO(251,126, 253, 1),
